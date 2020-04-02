@@ -2,6 +2,8 @@
 
 module PowerRake
   module ConfigHelper
+    CONFIGURATION_FILE = 'power-rake.yml'
+
     def config
       @config ||= Config.new(data)
     end
@@ -13,7 +15,9 @@ module PowerRake
     private
 
     def data
-      contents = File.new('power-rake.yml').read
+      return {} unless File.exists? CONFIGURATION_FILE
+
+      contents = File.new(CONFIGURATION_FILE).read
       processed = ERB.new(contents).result
       YAML.load(processed)
     end

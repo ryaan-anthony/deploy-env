@@ -14,4 +14,5 @@ Gem::Specification.new do |s|
   s.homepage    = 'http://rubygems.org/gems/power-rake'
   s.license     = 'MIT'
   s.required_ruby_version = Gem::Requirement.new('>= 2.4')
+  s.add_runtime_dependency 'rake'
 end

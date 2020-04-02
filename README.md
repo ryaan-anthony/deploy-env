@@ -1,8 +1,9 @@
 # Power Rake
 
-Rake tasks for provisioning infrastructure and deploying/managing web applications. 
+Enhance your rake tasks!
 
-## Installation 
+
+### Installation 
 
 Add to your Gemfile:
 
@@ -10,9 +11,10 @@ Add to your Gemfile:
 gem 'power-rake'
 ```
 
-Configure Power Rake:
 
-- Create `power-rake.yml` in your application.
+### Configuration
+
+- Create `power-rake.yml` in your project root, example:
 
 ```yaml
 example:
@@ -20,5 +22,13 @@ example:
   host: https://example.com/
 ```
 
+- Require `power-rake` in your `Rakefile`
+
+```ruby
+require 'power-rake'
+```
+
+
+### Contribution
 
 Feel free to [submit issues](https://github.com/ryaan-anthony/power-rake/issues) or [help make it better](https://github.com/ryaan-anthony/power-rake/pulls). 

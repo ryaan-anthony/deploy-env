@@ -18,3 +18,9 @@ end
 def try(command)
   system(command) || abort("Aborted! `#{command}`")
 end
+
+# Access the config
+# @return [PowerRake::Config]
+def config
+  PowerRake.config
+end
