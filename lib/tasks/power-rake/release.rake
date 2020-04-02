@@ -3,11 +3,13 @@ require 'power-rake/version'
 namespace 'power-rake' do
   desc "Release version #{PowerRake::VERSION} of the gem"
   task :release do
-    system "git tag -a v#{PowerRake::VERSION} -m 'Tagging #{PowerRake::VERSION}'"
-    system 'git push --tags'
+    continue? "Release version #{PowerRake::VERSION} of the gem?"
 
-    system 'gem build power-rake.gemspec'
-    system "gem push power-rake-#{PowerRake::VERSION}.gem"
-    system "rm power-rake-#{PowerRake::VERSION}.gem"
+    try "git tag -a v#{PowerRake::VERSION} -m 'Tagging #{PowerRake::VERSION}'"
+    try 'git push --tags'
+
+    try 'gem build power-rake.gemspec'
+    try "gem push power-rake-#{PowerRake::VERSION}.gem"
+    try "rm power-rake-#{PowerRake::VERSION}.gem"
   end
 end
