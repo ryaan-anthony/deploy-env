@@ -5,15 +5,14 @@ require 'power-rake/version'
 Gem::Specification.new do |s|
   s.name        = 'power-rake'
   s.version     = PowerRake::VERSION
-  s.date        = '2020-04-20'
-  s.summary     = 'Power Rake'
-  s.description = 'Power Rake'
+  s.required_ruby_version = Gem::Requirement.new('>= 2.4')
   s.authors     = ['Ryan Tulino']
   s.email       = 'rtulino@gmail.com'
-  s.files       = []
+  s.summary     = 'Power Rake'
+  s.description = 'Power Rake'
+  s.files       = `git ls-files lib`.split('\n')
   s.homepage    = 'http://rubygems.org/gems/power-rake'
-  s.license     = 'MIT'
+  s.licenses     = ['MIT']
   s.require_paths = ['lib']
-  s.required_ruby_version = Gem::Requirement.new('>= 2.4')
   s.add_runtime_dependency 'rake'
 end
