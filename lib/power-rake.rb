@@ -1,6 +1,5 @@
 # frozen_string_literal: true
-require 'erb'
-require 'yaml'
+
 require 'power-rake/common'
 
 module PowerRake

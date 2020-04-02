@@ -14,12 +14,12 @@ gem 'power-rake'
 
 ### Configuration
 
-- Create `power-rake.yml` in your project root, example:
+- Create `power-rake.yml` in your project root, you can include `erb` syntax:
 
 ```yaml
-example:
+development:
   api_key: <%= ENV['EXAMPLE_API_KEY'] %>
-  host: https://example.com/
+  api_host: https://example.com/
 ```
 
 - Require `power-rake` in your `Rakefile`
@@ -28,6 +28,12 @@ example:
 require 'power-rake'
 ```
 
+- Define environment variables
+
+```
+export RAKE_ENV=production          # default is development
+export RAKE_CONFIG=power-rake.yml   # default is power-rake.yml
+```
 
 ### Contribution
 

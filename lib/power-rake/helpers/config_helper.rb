@@ -2,8 +2,6 @@
 
 module PowerRake
   module ConfigHelper
-    CONFIGURATION_FILE = 'power-rake.yml'
-
     def config
       @config ||= Config.new(data)
     end
@@ -12,14 +10,20 @@ module PowerRake
       yield(config)
     end
 
+    def current_env
+      ENV['RAKE_ENV'] || :development
+    end
+
+    def config_file
+      ENV['RAKE_CONFIG'] || 'power-rake.yml'
+    end
+
     private
 
     def data
-      return {} unless File.exists? CONFIGURATION_FILE
+      return {} unless File.exists? config_file
 
-      contents = File.new(CONFIGURATION_FILE).read
-      processed = ERB.new(contents).result
-      YAML.load(processed)
+      Config.read(config_file, current_env)
     end
   end
 end
