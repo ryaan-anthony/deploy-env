@@ -13,6 +13,7 @@ Gem::Specification.new do |s|
   s.files       = []
   s.homepage    = 'http://rubygems.org/gems/power-rake'
   s.license     = 'MIT'
+  s.require_paths = ['lib']
   s.required_ruby_version = Gem::Requirement.new('>= 2.4')
   s.add_runtime_dependency 'rake'
 end
