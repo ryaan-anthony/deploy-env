@@ -24,12 +24,10 @@ Function name | Arguments | Description
 `continue?` | `message`: `String` | Prompt user and abort unless 'y'
 `prompt` | `message`: `String` | Prompt user and return input
 `try` | `command`: `String` | Try system command or abort
-`config` | n/a | Returns config model
-
 
 ### Configuration (optional)
 
-- Create `power-rake.yml` in your project root, you can include `erb` syntax:
+- Create `power-rake.yml` in your project root. You can include `erb` syntax.
 
 ```yaml
 development:
@@ -42,6 +40,20 @@ development:
 ```
 export RAKE_ENV=production          # default is development
 export RAKE_CONFIG=power-rake.yml   # default is power-rake.yml
+
+```
+
+- Access your the current environment
+
+
+```
+ PowerRake.current_env              # development
+```
+
+- Access your config values
+
+```
+ PowerRake.config.api_key           # abc123
 ```
 
 ### Contribution
