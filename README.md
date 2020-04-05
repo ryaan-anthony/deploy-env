@@ -24,6 +24,7 @@ Function name | Arguments | Description
 `continue?` | `message`: `String` | Prompt user and abort unless 'y'
 `prompt` | `message`: `String` | Prompt user and return input
 `try` | `command`: `String` | Try system command or abort
+`try?` | `command`: `String` | Prompt user before trying a system command
 
 ### Configuration (optional)
 
