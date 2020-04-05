@@ -2,7 +2,7 @@ require 'power-rake/version'
 
 desc "Release version #{PowerRake::VERSION} of the gem"
 task :release do
-  continue? "Release version #{PowerRake::VERSION} of the gem?"
+  continue? "Release version #{PowerRake::VERSION} of the gem? (y|n)"
 
   try "git tag -a v#{PowerRake::VERSION} -m 'Tagging #{PowerRake::VERSION}'"
   try 'git push --tags'
