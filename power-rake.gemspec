@@ -1,6 +1,5 @@
 # frozen_string_literal: true
-$LOAD_PATH.unshift File.expand_path('../lib', __FILE__)
-require 'power-rake/version'
+require '../lib/power-rake/version'
 
 Gem::Specification.new do |s|
   s.name        = 'power-rake'
