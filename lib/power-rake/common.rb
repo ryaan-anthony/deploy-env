@@ -7,9 +7,8 @@ def continue?(message = 'Continue? (y|n)')
 end
 
 # Inline message prompt
-# @param [String]
-def prompt(message)
-  print message
+def prompt(*args)
+  print(*args)
   STDIN.gets.strip
 end
 
