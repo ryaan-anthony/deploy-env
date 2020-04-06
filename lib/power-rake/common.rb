@@ -21,7 +21,6 @@ end
 # Prompt before trying a system command
 # @param [string]
 def try?(command)
-  puts command
-  continue?
+  continue? "#{command}\nContinue? (y|n)"
   try(command)
 end
