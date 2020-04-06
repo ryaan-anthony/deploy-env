@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.authors     = ['Ryan Tulino']
   s.email       = 'rtulino@gmail.com'
   s.summary     = 'Power Rake'
-  s.description = 'Power Rake'
+  s.description = 'Enhance your rake tasks!'
   s.files       = `git ls-files lib`.split("\n")
   s.homepage    = 'http://rubygems.org/gems/power-rake'
   s.licenses     = ['MIT']

@@ -1,12 +1,28 @@
 # frozen_string_literal: true
 
-require 'power-rake/common'
+# Prompt with control flow
+# @param [String]
+def continue?(message = 'Continue? (y|n)')
+  abort 'Aborted!' unless prompt(message).downcase == 'y'
+end
 
-module PowerRake
-  autoload :Config,       'power-rake/models/config'
-  autoload :ConfigHelper, 'power-rake/helpers/config_helper'
+# Inline message prompt
+# @param [String]
+def prompt(message)
+  print message
+  STDIN.gets.strip
+end
 
-  class << self
-    include ConfigHelper
-  end
+# Try a system command
+# @param [string]
+def try(command)
+  system(command) || abort("Aborted! `#{command}`")
+end
+
+# Prompt before trying a system command
+# @param [string]
+def try?(command)
+  puts command
+  continue?
+  try(command)
 end

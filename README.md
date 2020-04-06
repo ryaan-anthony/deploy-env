@@ -26,37 +26,6 @@ Function name | Arguments | Description
 `try` | `command`: `String` | Try system command or abort
 `try?` | `command`: `String` | Prompt user before trying a system command
 
-### Configuration (optional)
-
-- Create `power-rake.yml` in your project root. You can include `erb` syntax.
-
-```yaml
-development:
-  api_key: <%= ENV['EXAMPLE_API_KEY'] %>
-  api_host: https://example.com/
-```
-
-- Define environment variables
-
-```
-export RAKE_ENV=production          # default is development
-export RAKE_CONFIG=power-rake.yml   # default is power-rake.yml
-
-```
-
-- Access your the current environment
-
-
-```
- PowerRake.current_env              # development
-```
-
-- Access your config values
-
-```
- PowerRake.config.api_key           # abc123
-```
-
 ### Contribution
 
 Feel free to [submit issues](https://github.com/ryaan-anthony/power-rake/issues) or [help make it better](https://github.com/ryaan-anthony/power-rake/pulls). 
