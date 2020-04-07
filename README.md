@@ -34,6 +34,14 @@ task :example do
 end
 ```
 
+```bash
+$ rake example
+First name: Ryan
+Last name: Tulino
+Is 'Ryan Tulino' correct? (yes/no)yes
+Thank you!
+```
+
 ### Contribution
 
 Feel free to [submit issues](https://github.com/ryaan-anthony/power-rake/issues) or [help make it better](https://github.com/ryaan-anthony/power-rake/pulls). 
