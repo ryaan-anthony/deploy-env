@@ -3,7 +3,7 @@
 # Prompt with control flow
 # @param [String]
 def continue?(message = 'Continue? (y|n)', expectation = 'y')
-  abort 'Aborted!' unless prompt(message) == 'y'
+  abort 'Aborted!' unless prompt(message) == expectation
 end
 
 # Inline message prompt
