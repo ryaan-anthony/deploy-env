@@ -9,7 +9,8 @@ end
 # Inline message prompt
 def prompt(*args)
   print(*args)
-  STDIN.gets.strip
+  value = STDIN.gets.strip
+  value unless value.empty?
 end
 
 # Try a system command
